@@ -24,3 +24,11 @@ In the assignment, there is a statement that the ETag might be encoded, so this 
 It was improbable that we got the English word "This" by accident, so we have tried to tinker with it a bit more. After a while, we tried to remove the whole part with the equal signs and got our ETag.
 
 ![alt text](img/ass3_decodeB.png)
+
+## In the service of others
+We used Wireshark to filter out the responses with HTTP codes. Used: `http.response.code` filter. Found those which had HTTP 200.
+![alt text](img/3_2_wireshark.png) 
+
+## Name your poison
+We used Wireshark to inspect DNS traffic. We applied the `dns&&dns.a` filter to see dns A type related traffic. Marked those which had suspicious requests (looked like an attempt to flood the cache of dns)
+![alt text](img/3_1_wireshark.png) 
