@@ -1,5 +1,12 @@
 # Assignment 5
 
+## Knock Knock...
+We inspected the `/var/log/auth.log` file and looked for the successful logins.
+We used this command to filter out the usernames with the number of logins: `cat /var/log/auth.log | grep opened | awk {'print $11'} | sort | uniq -c`
+
+We got the following results:
+![alt](img/ass5_1.png)
+
 ## Never send a human to do a machine's job
 We knew we were interested in the authentication log, which we can find in `/var/log/auth.log`. Also, we knew that we were looking for authentication failures. We put this together and composed this command:
 
